@@ -2,9 +2,28 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 export default function AuthDemo() {
   const { data: session } = useSession();
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const result = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
 
+    if (result?.error) {
+      console.log("Login failed:", result.error);
+    } else {
+      console.log("Login successful!");
+      router.push("/home");
+    }
+  };
   return (
     <div>
       {session ? (
@@ -27,7 +46,7 @@ export default function AuthDemo() {
                     Log in
                   </h1>
                   {/* will edit this once i add sign-in credentials  */}
-                  <form action="#" method="post" className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label htmlFor="email" className="mb-2 dark:text-gray-400 text-lg">
                         Email
@@ -36,6 +55,7 @@ export default function AuthDemo() {
                         id="email"
                         className="border p-3 dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 shadow-md placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
                         type="email"
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email"
                         required
                       />
@@ -48,6 +68,7 @@ export default function AuthDemo() {
                         id="password"
                         className="border p-3 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
                         type="password"
+                        onChange={(e) => setPassword(e.target.value)}
                         placeholder="Password"
                         required
                       />
@@ -70,7 +91,7 @@ export default function AuthDemo() {
                       Don't have an account?
                       <a
                         className="group text-blue-400 transition-all duration-100 ease-in-out"
-                        href="/sign-up"
+                        href="/register"
                       >
                         <span
                           className="bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"

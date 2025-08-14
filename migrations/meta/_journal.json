@@ -22,6 +22,13 @@
       "when": 1755181876756,
       "tag": "0002_flat_the_fury",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755189758555,
+      "tag": "0003_material_mad_thinker",
+      "breakpoints": true
     }
   ]
 }
