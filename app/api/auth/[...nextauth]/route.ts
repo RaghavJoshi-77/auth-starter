@@ -67,8 +67,8 @@ const handler = NextAuth({
     }
   }, 
   pages:{
-    signIn:"sign-in",
-    error:"sign-in"
+    signIn:"/sign-in", // Corrected: Use the absolute path matching your folder
+    error:"/sign-in"   // Also update the error page path
   },
   session:{
     strategy:"jwt",

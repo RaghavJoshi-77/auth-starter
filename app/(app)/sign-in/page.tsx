@@ -108,7 +108,7 @@ export default function AuthDemo() {
                     className="flex items-center justify-center mt-5 flex-wrap"
                   >
                     <button
-                      onClick={() => signIn("google")}
+                      onClick={() => signIn("google", { callback: "/home" })}
                       className="hover:scale-105 ease-in-out duration-300 shadow-lg p-2 rounded-lg m-1"
                     >
                       <img
@@ -119,7 +119,7 @@ export default function AuthDemo() {
 
                     </button>
                     <button
-                      onClick={() => signIn("github")}
+                      onClick={() => signIn("github", { callback: "/home" })}
                       className="hover:scale-105 ease-in-out duration-300 shadow-lg p-2 rounded-lg m-1"
                     >
                       <img
