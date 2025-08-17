@@ -186,3 +186,7 @@ export default function AuthDemo() {
   );
 }
 
+
+
+
+//                       onClick={() => signIn("github", { callback: "/home" })}  this is importnatn part rem that 

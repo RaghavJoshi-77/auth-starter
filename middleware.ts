@@ -20,9 +20,9 @@ export default withAuth(
                 //public paths
                 //define your public paths here
                 //this is example
-                // if (pathname === "/" || pathname.startsWith("/api/videos")) {
-                //     return true
-                // }
+                if (pathname === "/" ) {
+                    return true
+                }
 
                 return !!token
             }
