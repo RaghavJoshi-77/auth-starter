@@ -1,13 +1,32 @@
 {
-  "name": "starter-templet",
-  "version": "0.1.0",
-  "private": true,
+  "name": "create-next-auth-starter",
+  "version": "1.0.1",
+  "description": "A CLI to bootstrap a Next.js project with Drizzle, Neon DB, and NextAuth.js pre-configured.",
+  "bin": {
+    "create-next-auth-starter": "cli.js"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaghavJoshi-77/auth-starter.git"
+  },
+  "keywords": [
+    "nextjs",
+    "next-auth",
+    "drizzle",
+    "neon",
+    "serverless",
+    "starter",
+    "template",
+    "cli"
+  ],
+  "author": "Raghav Joshi (https://github.com/RaghavJoshi-77)",
+  "license": "MIT",
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
     "@types/bcryptjs": "^2.4.6",

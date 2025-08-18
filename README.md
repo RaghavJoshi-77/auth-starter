@@ -99,8 +99,3 @@ This starter template provides a foundation for building your application with a
   * **Building your API**: Create API routes in the `pages/api` or `app/api` directory to handle your application's logic.
 
 -----
-
-## Future plans 
-
-i want make this a npm repo so that once you do npm install this repo should be cloned in your IDE 
-plus i want to make this a better documentation 
