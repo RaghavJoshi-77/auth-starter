@@ -1,6 +1,6 @@
 {
   "name": "create-next-auth-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to bootstrap a Next.js project with Drizzle, Neon DB, and NextAuth.js pre-configured.",
   "bin": {
     "create-next-auth-starter": "cli.js"
