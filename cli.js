@@ -22,7 +22,7 @@ function log(color, message) {
 // --- Main Scaffolding Logic ---
 
 // 1. Get the project name from the command-line arguments
-const projectName = process.argv[2];
+const projectName = process.argv[2]; // array that contains command line arguments
 if (!projectName) {
   log(colors.red, "Error: Please specify the project directory.");
   log(colors.reset, "  For example: npx create-next-auth-starter my-app");
