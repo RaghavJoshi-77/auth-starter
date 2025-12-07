@@ -1,7 +1,3 @@
-Of course. Based on your project's evolution into a CLI tool and the specific tech stack you're using, here is a completely rewritten, modern `README.md`.
-
-This new README is designed for users who will discover your project on npm and use it with `npx`.
-
 -----
 
 # Create Next Auth Starter
